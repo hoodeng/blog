@@ -5,15 +5,27 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome to Spring Web MVC project</title>
+        <title>欢迎来到我的博客</title>
     </head>
 
     <body>
-        <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
-        <p><i>To display a different welcome page for this project, modify</i>
-            <tt>index.jsp</tt> <i>, or create your own welcome page then change
-                the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
-                welcome page and also update the welcome-file setting in</i>
-            <tt>web.xml</tt>.</p>
+        <p>大家好! 这是我的博客，欢迎常来转转</p>
+        <form id="formid"  name= "myform" method = 'post'  action = 'BlogCommitServlet' onsubmit = "return checkUser();" >
+            <big width="60" height="40" align="right">标题</big>
+
+            <br>
+            <input style="width:500px;height:20px" type="text" value="" class="text2" name = "title" id = "titleid"/>
+            <br/>
+            <br>
+            <big width="60" height="40" align="bottom">内容</big>
+            <br/>
+            
+            <textarea style="width:500px;height: 500px" name="content" clos="100" rows="5" warp="virtual"></textarea>
+            
+            <br>
+            <input style="margin-top: 20px" type="submit" value="提交" class="btn2"  />
+            </br>
+
+        </form>
     </body>
 </html>

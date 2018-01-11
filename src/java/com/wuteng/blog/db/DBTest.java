@@ -22,7 +22,6 @@ import java.util.logging.Logger;
  */
 public class DBTest {
     //驱动程序名
-
     static String driver = "com.mysql.jdbc.Driver";
     //URL指向要访问的数据库名mydata
     static String url = "jdbc:mysql://localhost:3306/blog?useSSL=false";
@@ -90,14 +89,15 @@ public class DBTest {
                 } catch (SQLException ex) {
                     Logger.getLogger(DBTest.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                if (con != null) {
+            }
+            
+            if (con != null) {
                     try {
                         con.close();
                     } catch (SQLException ex) {
                         Logger.getLogger(DBTest.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
-            }
         }
     }
 
